@@ -9,6 +9,7 @@
 
 ## Importando biblioteca de funções ##
 source Jogos/labirinto.sh
+source Jogos/forca.sh
 
 clear
 ## Menu de escolha ##
@@ -21,6 +22,7 @@ function jogos
       echo "##        MENU DE JOGOS        ##"
       echo -e "#################################\n"
       echo " [ 1 ] LABIRINTO "
+      echo " [ 2 ] FORCA "
       echo " [ 6 ] VOLTAR"
       echo " [ 7 ] SAIR "
       echo -e "\n#################################\n"
@@ -33,6 +35,7 @@ function jogos
       ## Opções da calculadora ##
       case $OPCAO in
         1)labirinto;;
+        2)forca;;
         6)Main;;
         7)exit;;
       *)
