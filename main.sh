@@ -9,29 +9,33 @@
 
 ## Importando biblioteca de funções ##
 source Calculadora/calc.sh
+source Jogos/jogos.sh
 
 Main()
 {
 clear
 ## Menu de escolha ##
     echo -e "\033[1;37m\n\n#################################"
-    echo "##         MENU         ##"
+    echo "##        MENU PRINCIPAL       ##"
     echo -e "#################################\n"
-    echo " [ 1 ] CALCULADORA "
-    echo " [ 7 ] SAIR "
+    echo " [ 1 ] CALCULADORA"
+    echo " [ 2 ] JOGOS"
+    echo " [ 7 ] SAIR"
     echo -e "\n#################################\n"
     echo "Qual é a opção desejada?"
-    read OPCAO
+    tput sgr0
+    read -n1 -s OPCAO
     echo -e "\033[0m"
     clear
 
     ## Opções da calculadora ##
     case $OPCAO in
-      1)MenuCalc;;
+      1)menucalculadora;;
+      2)jogos;;
       7)exit;;
     *)
 
-    whiptail --title "AVISO" --msgbox "Por favor digite uma opção váilda !" 8 40
+    whiptail --title "AVISO" --msgbox "Por favor digite uma opção válida !" 8 40
     echo ; Main ;;
   esac
 }

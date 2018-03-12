@@ -2,29 +2,25 @@
 #############################################
 ## Script para realizar cálculos numéricos ##
 ## Autor: Lucas Mucheroni                  ##
-## Inicio: 09/03/2018                      ##
+## Inicio: 12/03/2018                      ##
 ## Última atualização: 12/03/2018          ##
 ## Autor da última atualização: Lucas      ##
 #############################################
 
 ## Importando biblioteca de funções ##
-source Calculadora/funcoes.sh
+source Jogos/labirinto.sh
 
 clear
 ## Menu de escolha ##
 
-function menucalculadora
+function jogos
 {
-  Calculadora()
+  Jogos()
     {
       echo -e "\033[1;37m\n\n#################################"
-      echo "##         CALCULADORA         ##"
+      echo "##        MENU DE JOGOS        ##"
       echo -e "#################################\n"
-      echo " [ 1 ] SOMA "
-      echo " [ 2 ] SUBTRAÇÃO "
-      echo " [ 3 ] MULTIPLICAÇÃO "
-      echo " [ 4 ] DIVISÃO"
-      echo " [ 5 ] RAIZ QUADRADA"
+      echo " [ 1 ] LABIRINTO "
       echo " [ 6 ] VOLTAR"
       echo " [ 7 ] SAIR "
       echo -e "\n#################################\n"
@@ -36,17 +32,13 @@ function menucalculadora
 
       ## Opções da calculadora ##
       case $OPCAO in
-        1)soma;;
-        2)subtracao;;
-        3)multiplicacao;;
-        4)divisao;;
-        5)raiz;;
+        1)labirinto;;
         6)Main;;
         7)exit;;
       *)
-      whiptail --title "AVISO" --msgbox "Por favor digite uma opção válida !" 8 40
-      echo ; Calculadora ;;
+      whiptail --title "AVISO" --msgbox "Por favor digite uma opção váilda !" 8 40
+      echo ; Jogos ;;
     esac
   }
-  Calculadora
+  Jogos
 }
