@@ -40,7 +40,7 @@ export _LINES=10
 export _COLS=10
 
 export _TITULO=" DIGITE UMA LETRA "; # variavel de interação com o jogador
-export _URL="https://raw.githubusercontent.com/terminalrootsh/jogodaforca/master/.palavras.txt"
+export _URL="https://github.com/cs-lucas-mucheroni/FritandoNoShell.git/develop/.palavras.txt"
 export _WORDS=".palavras.txt"
 
 # pega o arquivo se não houver no diretório do jogo
@@ -174,14 +174,16 @@ do
 	# Se o jogador pressinar CTRL+E
 	if [ "$_X" == "6" ]; then
 		setterm -cursor on;
+		reset;
 		Main
 		break;
 		exit 0;
+
 	# Se o jogador pressinar CTRL+A
   elif [ "$_X" == "7" ]; then
 		#setterm -cursor on;
     clear
-    exit 0
+    exit 1
     break ;
 	# Se o jogador pressinar as teclas direcionais, pega a letra da tecla e trata como tentativa
 	# FIXME o certo era não fazer nada
