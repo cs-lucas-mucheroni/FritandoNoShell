@@ -10,7 +10,7 @@
 ## Importando biblioteca de funções ##
 source Calculadora/calc.sh
 source Jogos/jogos.sh
-
+source Desafios/desafios.sh
 Main()
 {
 clear
@@ -20,6 +20,7 @@ clear
     echo -e "#################################\n"
     echo " [ 1 ] CALCULADORA"
     echo " [ 2 ] JOGOS"
+    echo " [ 3 ] DESAFIOS"
     echo " [ 7 ] SAIR"
     echo -e "\n#################################\n"
     echo "Qual é a opção desejada?"
@@ -32,6 +33,7 @@ clear
     case $OPCAO in
       1)menucalculadora;;
       2)jogos;;
+      3)desafios;;
       7)exit;;
     *)
 
