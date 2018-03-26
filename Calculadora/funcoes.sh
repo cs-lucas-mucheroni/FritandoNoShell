@@ -1,10 +1,9 @@
 #!/bin/bash
 ###############################################
 ## Funçoes para realizar cálculos numéricos  ##
-## Arquivo: menu.sh                          ##
 ## Autor: Lucas Mucheroni                    ##
 ## Inicio: 09/03/2018                        ##
-## Última atualização: 12/03/2018            ##
+## Última atualização: 26/03/2018            ##
 ## Autor da última atualização: Lucas        ##
 ###############################################
 
@@ -17,10 +16,10 @@ function soma(){
   read first
   echo "Digite o segundo Valor: "
   read second
-  if [[ $first = [0-9] || $second = [0-9] ]]; then
-    whiptail --title "AVISO" --msgbox "Resultado da soma: $((first + second))" 8 40
+  if [[ $first != [0-9] || $second != [0-9] ]]; then
+    echo "Favor digitar uma opção válida !"
   else
-    whiptail --title "AVISO" --msgbox "Favor digitar uma opção válida !" 8 40
+    echo "Resultado da soma: $((first + second))"
   fi
   echo -e "#################################\n \033[0m"
   Calculadora
@@ -35,10 +34,10 @@ function subtracao(){
   read first
   echo "Digite o segundo Valor: "
   read second
-  if [[ $first = [0-9] || $second = [0-9] ]]; then
-    whiptail --title "AVISO" --msgbox "Resultado da soma: $((first - second))" 8 40
+  if [[ $first != [0-9] || $second != [0-9] ]]; then
+    echo "Favor digitar uma opção válida !"
   else
-    whiptail --title "AVISO" --msgbox "Favor digitar uma opção válida !" 8 40
+    echo "Resultado da subtração: $((first - second))"
   fi
   echo -e "#################################\n \033[0m"
   Calculadora
@@ -53,10 +52,11 @@ function multiplicacao(){
   read first
   echo "Digite o segundo Valor: "
   read second
-  if [[ $first = [0-9] || $second = [0-9] ]]; then
-    whiptail --title "AVISO" --msgbox "Resultado da soma: $((first * second))" 8 40
+  if [[ $first != [0-9] || $second != [0-9] ]]; then
+    #whiptail --title "AVISO" --msgbox "Favor digitar uma opção válida !" 8 40
+    echo "Favor digitar uma opção válida !"
   else
-    whiptail --title "AVISO" --msgbox "Favor digitar uma opção válida !" 8 40
+    echo "Resultado da multiplicação: $((first * second))"
   fi
   echo -e "#################################\n\033[0m "
   Calculadora
@@ -71,10 +71,10 @@ function divisao(){
   read first
   echo "Digite o segundo Valor: "
   read second
-  if [[ $first = [0-9] || $second = [0-9] ]]; then
-    whiptail --title "AVISO" --msgbox "Resultado da soma: $((first / second))" 8 40
+  if [[ $first != [0-9] || $second != [0-9] ]]; then
+    echo "Favor digitar uma opção válida !"
   else
-    whiptail --title "AVISO" --msgbox "Favor digitar uma opção válida !" 8 40
+    echo "Resultado da divisão: $((first / second))"
   fi
   echo -e "#################################\n\033[0m"
   Calculadora
@@ -90,10 +90,10 @@ function raiz(){
   echo "Digite o valor desejado: "
   read first
   second=$(echo "sqrt($first)" | bc)
-  if [[ $first = [0-9] ]]; then
-    whiptail --title "AVISO" --msgbox "Resultado: $second" 8 40
+  if [[ $first != [0-9] ]]; then
+    echo "Favor digitar uma opção válida !"
   else
-    whiptail --title "AVISO" --msgbox "Favor digitar uma opção válida !" 8 40
+    echo "A raiz quadrada de $first é $second!"
   fi
   echo -e "#################################\n\033[0m"
   Calculadora

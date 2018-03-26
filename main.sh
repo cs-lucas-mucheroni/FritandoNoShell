@@ -37,7 +37,9 @@ clear
       7)exit;;
     *)
 
-    whiptail --title "AVISO" --msgbox "Por favor digite uma opção válida !" 8 40
+    #whiptail --title "AVISO" --msgbox "Por favor digite uma opção válida !" 8 40
+    #notify-send "Por favor digite uma opção válida !"
+    
     echo ; Main ;;
   esac
 }

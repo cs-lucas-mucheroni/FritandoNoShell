@@ -39,7 +39,7 @@ function jogos
         6)Main;;
         7)exit;;
       *)
-      whiptail --title "AVISO" --msgbox "Por favor digite uma opção váilda !" 8 40
+      #whiptail --title "AVISO" --msgbox "Por favor digite uma opção váilda !" 8 40
       echo ; Jogos ;;
     esac
   }

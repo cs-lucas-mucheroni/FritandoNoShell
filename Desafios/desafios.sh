@@ -28,7 +28,7 @@ case $OPCAO in
   7)exit;;
   8)exec;;
 *)
-whiptail --title "AVISO" --msgbox "Por favor digite uma opção váilda !" 8 40
+#whiptail --title "AVISO" --msgbox "Por favor digite uma opção váilda !" 8 40
 echo ; desafios ;;
 esac
 

@@ -1,9 +1,10 @@
 #!/bin/bash
 #############################################
-## Script para realizar cálculos numéricos ##
+## Menu da calculadora                     ##
+## Arquivo: Calculadora/funcoes.sh         ##
 ## Autor: Lucas Mucheroni                  ##
 ## Inicio: 09/03/2018                      ##
-## Última atualização: 12/03/2018          ##
+## Última atualização: 26/03/2018          ##
 ## Autor da última atualização: Lucas      ##
 #############################################
 
@@ -44,7 +45,7 @@ function menucalculadora
         6)Main;;
         7)exit;;
       *)
-      whiptail --title "AVISO" --msgbox "Por favor digite uma opção válida !" 8 40
+      #whiptail --title "AVISO" --msgbox "Por favor digite uma opção válida !" 8 40
       echo ; Calculadora ;;
     esac
   }
