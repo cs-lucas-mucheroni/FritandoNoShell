@@ -1,6 +1,18 @@
 #!/bin/bash
+
+###############################################
+## Apenas irá mostrar os desafios            ##
+## Autor: Lucas Mucheroni                    ##
+## Inicio: 09/03/2018                        ##
+## Última atualização: 26/03/2018            ##
+## Autor da última atualização: Lucas        ##
+###############################################
+
+## O script que irá executar o tempo e abrir uma nova janela
 source Desafios/exec.sh
+
 function desafios(){
+echo -e "\033[1;37m"
 cat << EOF
 
 DESAFIOS
@@ -15,6 +27,7 @@ Qual o dia da semana que você nasceu?
 
 Regras:
 
+
 ---
 EOF
 
@@ -28,7 +41,7 @@ case $OPCAO in
   7)exit;;
   8)exec;;
 *)
-#whiptail --title "AVISO" --msgbox "Por favor digite uma opção váilda !" 8 40
+
 echo ; desafios ;;
 esac
 

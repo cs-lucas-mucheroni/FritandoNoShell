@@ -1,7 +1,7 @@
 DevOps
 Derivada da junção entre Desenvolvedor e Operações, DevOps é uma metodologia de desenvolvimento de software que busca maximizar os resultados das equipes de TI. A metodologia integra toda a equipe de colaboradores e torna mais eficiente a comunicação entre eles, elevando o desenvolvimento de software e as equipes de TI a um novo patamar. As empresas que possuem as suas equipes de TI têm essas equipes compostas por profissionais especializados em diversas tecnologias, linguagens e operação em sistemas, que vão do RH ao financeiro, passando por todos os setores chaves da empresa.
 Apache Tomcat
-#O Tomcat é um servidor web Java, mais especificamente, um container de servlets.
+O Tomcat é um servidor web Java, mais especificamente, um container de servlets.
 Amazon Web Services
 A Amazon Web Services (AWS) é uma plataforma de serviços em nuvem segura, oferecendo poder computacional, armazenamento de banco de dados, distribuição de conteúdo e outras funcionalidades para ajudar as empresas em seu dimensionamento e crescimento.
 Backup

@@ -154,7 +154,7 @@ if [ ! -d "$TMP" ]; then
 fi
 init_maze
 carve_maze $((2 * MAZE_WIDTH + 2))
-maze[$((MAZE_WIDTH + 2))]=1
+maze[$((MAZE_WIDTH + 2))]=0
 maze[$(((MAZE_HEIGHT - 2) * MAZE_WIDTH + MAZE_WIDTH - 3))]=1
 print_maze > $TMP/maze.txt
 sed -i '1d' $TMP/maze.txt
@@ -165,10 +165,10 @@ INPUT="0" # Entrada de dados
 m="0" # Movimento 1
 n="1" # Movimento 2
 C="0" # Teste de colisões
-x="3" # Coordenada x
-y="0" # Coordenada y
+x="5" # Coordenada x
+y="2" # Coordenada y
 counter="1" # Conta movimentos
-GANHA="$(echo $MAZE_HEIGHT - 3 | bc)" # Detecta local da saída
+GANHA="$(echo $MAZE_HEIGHT - 1 | bc)" # Detecta local da saída
 
 # Funções para imprimir labirinto e a bola
 function cat_maze() {
